@@ -46,10 +46,15 @@
                                 </td>
 
                                 <td class="py-4 px-6 border-b border-grey-light">
-                                    {{ customer.status_id ? setCustomerStatus(customer.status_id) : 'Not Assigned yet'}}
+                                    {{
+                                        customer.work_with ?
+                                        customer.status_id ? setCustomerStatus(customer.status_id) : 'Not Action yet'
+                                        : 'Not Assigned yet'
+                                    }}
                                 </td>
                                 <td>
                                     <a
+                                        v-if="customer.work_with"
                                         @click.prevent="viewStatusModal(customer)"
                                         href="#" class="text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-green hover:bg-green-dark">Change Staus</a>
 

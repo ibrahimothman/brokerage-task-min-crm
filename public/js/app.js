@@ -3594,6 +3594,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -26443,10 +26448,12 @@ var render = function() {
                                 _vm._v(
                                   "\n                                " +
                                     _vm._s(
-                                      customer.status_id
-                                        ? _vm.setCustomerStatus(
-                                            customer.status_id
-                                          )
+                                      customer.work_with
+                                        ? customer.status_id
+                                          ? _vm.setCustomerStatus(
+                                              customer.status_id
+                                            )
+                                          : "Not Action yet"
                                         : "Not Assigned yet"
                                     ) +
                                     "\n                            "
@@ -26455,21 +26462,23 @@ var render = function() {
                             ),
                             _vm._v(" "),
                             _c("td", [
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-green hover:bg-green-dark",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                      return _vm.viewStatusModal(customer)
-                                    }
-                                  }
-                                },
-                                [_vm._v("Change Staus")]
-                              )
+                              customer.work_with
+                                ? _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-green hover:bg-green-dark",
+                                      attrs: { href: "#" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.viewStatusModal(customer)
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("Change Staus")]
+                                  )
+                                : _vm._e()
                             ])
                           ]
                         )

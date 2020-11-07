@@ -20,7 +20,7 @@
 * Admin can give a random password to the employee
 * Admin can show / create customer
 * Admin can assign a customer to an employee by clicking on the `change` button corresponding to each customer
-* Admin can show / update customer's status
+* Admin can show / update customer's status once the customer is assigned to an employee.
 * Employee can show his own customers
 * Employee can create customer which by default be assigned to him
 * Employee can update the customer's status
