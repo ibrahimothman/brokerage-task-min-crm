@@ -24,5 +24,5 @@
 * Employee can show his own customers
 * Employee can create customer which by default be assigned to him
 * Employee can update the customer's status
-
+* Employee can not show the employees page
 
